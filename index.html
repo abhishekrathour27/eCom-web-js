@@ -27,11 +27,11 @@
       class="container w-[100vw] flex flex-col gap-8 h-max p-3 md:flex md:flex-row md:items-center md:justify-between md:w-[90vw] ">
       <div class="nav_brand">
         <a href="index.html">
-          <img src="./public/logos.png" alt="eCom logo" class="logo w-28 md:w-52">
+          <img src="./public/logos.png" alt="eCom logo" class="logo w-[25vw] md:w-52">
         </a>
       </div>
       <nav class="navbar flex items-center justify-center">
-        <ul class="space-x-5  flex">
+        <ul class="space-x-5  md:text-base flex">
           <li class="relative inline-block cursor-pointer group hover:text-blue-600">
             <a href="/" class="nav-link">HOME</a>
             <span
@@ -61,27 +61,54 @@
       </nav>
     </div>
   </header>
+  
+  <!-- Hero section -->
 
-  <main class="bg-[#d9e9ff] bg-gradient-to-tr from-[#3d86fa] via-[#679eff] to-[#ebf3fe] md:w-[90vw]">
-    <section class="section-hero h-[100vh] md:h-[80vh]">
-      <div class="container grid col-col-1 md:flex md:flex-row-reverse">
-        <div class="sec-hero-img flex items-center justify-center my-14" data-aos="fade-up" data-aos-delay="600">
+  <main class="bg-[#d9e9ff] bg-gradient-to-tr from-[#3d86fa] via-[#679eff] to-[#ebf3fe] sm:w-full md:w-[90vw] shadow-md ">
+    <section class="section-hero h-[78vh] md:h-[75vh] lg:h-[70vh] lg:flex lg:items-center">
+      <div class="container grid col-col-1 lg:flex lg:flex-row-reverse">
+        <div class="sec-hero-img flex items-center justify-center my-14 lg:w-[45vw]" data-aos="fade-up" data-aos-delay="600">
           <figure class="">
-            <img src="./public/heroSection.svg" alt="" class="h-24">
+            <img src="./public/heroSection.svg" alt="" class="h-[25vw] pl-7">
           </figure>
         </div>
-        <div class="sec-hero-contant flex flex-col justify-center pl-5 md:w-1/2">
+        <div class="sec-hero-contant flex flex-col justify-center pl-5 lg:w-1/2 ">
           <p class="text-[#003B99] text-xl ">Explore the Latest in Tech Industries</p>
-          <span class="text-[#003B99] text-4xl leading-normal font-bold pt-4 w-80">Your Destination for Cutting-Edge
+          <span class="text-[#003B99] text-4xl leading-normal font-bold pt-4 w-[70vw] lg:w-[35vw] lg:text-5xl"
+          >Your Destination for Cutting-Edge
             Gadgets!</span>
           <p class="mt-4 leading-8 text-white">Welcome to Thapa eComStore, your ultimate destination for cutting-edge
             gadgets! Explore the latest in tech
             innovation and style with us. Shop now and discover a world of possibilities!</p>
-            <button class="btn bg-[#2A2C30] py-2 px-6 text-white rounded-lg ml-5 mt-8 w-full">Explore our products</button>
+            <button class="btn bg-[#2A2C30] hover:bg-[#26282cd8] cursor-pointer py-2 px-6 text-white rounded-lg ml-1 mt-8 w-fit">Explore our products</button>
         </div>
       </div>
     </section>
+    <div class="relative w-full overflow-hidden leading-none rotate-180">
+      <svg
+          class="relative block w-[calc(100%+1.3px)] h-[85px]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+      >
+          <path
+              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              class="fill-white opacity-25"
+          ></path>
+          <path
+              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              class="fill-white opacity-50"
+          ></path>
+          <path
+              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="fill-white"
+          ></path>
+      </svg>
+  </div>
   </main>
+  <footer>
+    <div class="mt-32">i am div</div>
+  </footer>
 
 </body>
 
