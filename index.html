@@ -9,8 +9,12 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="flex flex-col items-center">
-  <header class="section-navbar flex flex-col h-[25vh] md:max-h-max w-[100vw] md:shadow-md md:items-center md:w-[90vw]">
+<body class="flex flex-col items-center bg-[#F7F7F7]">
+
+  <!-- ******* NAVBAR SEC ******** -->
+
+  <header
+    class="section-navbar flex flex-col max-h-full md:max-h-max w-[100vw] md:shadow-md md:items-center md:w-[90vw]">
     <section class="top_txt ">
       <div
         class="head_container min-h-20  flex flex-col items-center justify-center gap-3 px-7 bg-[#2A2C30] text-white md:flex-row md:justify-between md:w-[90vw]">
@@ -61,54 +65,147 @@
       </nav>
     </div>
   </header>
-  
-  <!-- Hero section -->
 
-  <main class="bg-[#d9e9ff] bg-gradient-to-tr from-[#3d86fa] via-[#679eff] to-[#ebf3fe] sm:w-full md:w-[90vw] shadow-md ">
-    <section class="section-hero h-[78vh] md:h-[75vh] lg:h-[70vh] lg:flex lg:items-center">
+  <!-- ******* END NAVBAR SEC ********* -->
+
+  <!-- ******* HERO SEC ******** -->
+
+  <main
+    class="bg-[#d9e9ff] bg-gradient-to-tr from-[#3d86fa] via-[#679eff] to-[#ebf3fe] sm:w-full md:w-[90vw] shadow-md ">
+    <section class="section-hero max-h-full md:max-h-full lg:max-h-full lg:flex lg:items-center">
       <div class="container grid col-col-1 lg:flex lg:flex-row-reverse">
-        <div class="sec-hero-img flex items-center justify-center my-14 lg:w-[45vw]" data-aos="fade-up" data-aos-delay="600">
+        <div class="sec-hero-img flex items-center justify-center my-14 lg:w-[45vw]" data-aos="fade-up"
+          data-aos-delay="600">
           <figure class="">
             <img src="./public/heroSection.svg" alt="" class="h-[25vw] pl-7">
           </figure>
         </div>
         <div class="sec-hero-contant flex flex-col justify-center pl-5 lg:w-1/2 ">
           <p class="text-[#003B99] text-xl ">Explore the Latest in Tech Industries</p>
-          <span class="text-[#003B99] text-4xl leading-normal font-bold pt-4 w-[70vw] lg:w-[35vw] lg:text-5xl"
-          >Your Destination for Cutting-Edge
+          <span class="text-[#003B99] text-4xl leading-normal font-bold pt-4 w-[70vw] lg:w-[35vw] lg:text-5xl">Your
+            Destination for Cutting-Edge
             Gadgets!</span>
           <p class="mt-4 leading-8 text-white">Welcome to Thapa eComStore, your ultimate destination for cutting-edge
             gadgets! Explore the latest in tech
             innovation and style with us. Shop now and discover a world of possibilities!</p>
-            <button class="btn bg-[#2A2C30] hover:bg-[#26282cd8] cursor-pointer py-2 px-6 text-white rounded-lg ml-1 mt-8 w-fit">Explore our products</button>
+          <div
+            class="hero-btn bg-[#2A2C30] hover:bg-[#26282cd8] cursor-pointer py-2 px-6 text-white rounded-lg ml-1 mt-8 w-fit">
+            <a href="products.html" class="btn">Explore Our Products</a>
+          </div>
         </div>
       </div>
     </section>
     <div class="relative w-full overflow-hidden leading-none rotate-180">
-      <svg
-          class="relative block w-[calc(100%+1.3px)] h-[85px]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-      >
-          <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              class="fill-white opacity-25"
-          ></path>
-          <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              class="fill-white opacity-50"
-          ></path>
-          <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="fill-white"
-          ></path>
+      <svg class="relative block w-[calc(100%+1.3px)] h-[85px]" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          class="fill-white opacity-25"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          class="fill-white opacity-50"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="fill-white"></path>
       </svg>
-  </div>
+    </div>
   </main>
+
+  <!-- ******END HERO SEC ********** -->
+
+  <!--********* PRODUCT SECTION ********-->
+
+  <section class="section-extra-product mt-16">
+    <div
+      class="container grid grid-cols-1 w-[100vw] gap-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:py-14 lg:max-w-[90vw] lg:rounded-lg bg-[#FEFEFE] p-8 shadow-lg">
+      <div class="div-extra lg:flex lg:items-center ">
+        <div class="extra-text space-y-3">
+          <p class="text-blue-600">NEW YEAR SALE</p>
+          <p class="text-2xl font-semibold">Get and extra 50% Off</p>
+          <a href="#" class="text-lg underline font-light">SHOP NOW</a>
+        </div>
+        <div class="extra-img extra-laptop flex justify-center lg:items-center">
+          <img src="./public/laptop.png" alt="" class=" h-40 lg:h-[10vw]  " />
+        </div>
+      </div>
+
+      <div class="div-extra lg:flex">
+        <div class="extra-text space-y-3">
+          <p class="text-blue-600">NEW YEAR SALE</p>
+          <p class="text-2xl font-semibold">40% Discount on Speakers</p>
+          <a href="#" class="text-lg underline font-light">SHOP NOW</a>
+        </div>
+        <div class="extra-img extra-laptop flex justify-center lg:items-center">
+          <img src="./public/headphoneEcom.png" alt="" class="h-40 lg:h-[10vw] " />
+        </div>
+      </div>
+
+      <div class="div-extra lg:flex">
+        <div class="extra-text space-y-3">
+          <p class="text-blue-600">NEW YEAR SALE</p>
+          <p class="text-2xl font-semibold">Get and extra 50% off</p>
+          <a href="#" class="text-lg underline font-light">SHOP NOW</a>
+        </div>
+        <div class="extra-img extra-laptop flex justify-center lg:items-center">
+          <img src="./public/mobiles.png" alt="" class="h-40 lg:h-[10vw]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** END PRODUCT SEC ****** -->
+
+  <section class="section-policy mt-20 ">
+    <div class="container grid grid-cols-1 gap-10 pl-10 w-screen sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 lg:w-[90vw] bg-white py-20 sm:shadow-lg sm::rounded-md">
+      <div class="div-policy flex  gap-8 lg:flex lg:justify-center items-center lg:gap-10">
+        <div class="icons">
+          <i class="fa-solid fa-truck-fast text-blue-500 text-4xl"></i>
+        </div>
+        <div class="div-policy-text ">
+          <p>worldwide shipping</p>
+          <p>order above $100</p>
+        </div>
+      </div>
+
+      <div class="div-policy flex gap-8 lg:flex lg:justify-center items-center lg:gap-10">
+        <div class="icons">
+          <i class="fa-solid fa-rotate  text-blue-500 text-4xl"></i>
+        </div>
+        <div class="div-policy-text">
+          <p>Easy 30 Day Returns</p>
+          <p>Back Returns in 7 Days</p>
+        </div>
+      </div>
+
+      <div class="div-policy flex  gap-8 lg:flex lg:justify-center items-center lg:gap-10">
+        <div class="icons">
+          <i class="fa-solid fa-hand-holding-dollar  text-blue-500 text-4xl"></i>
+        </div>
+        <div class="div-policy-text">
+          <p>money back guarantee</p>
+          <p>guarantee with in 30-Days</p>
+        </div>
+      </div>
+
+      <div class="div-policy flex gap-8 lg:flex lg:justify-center items-center lg:gap-10">
+        <div class="icons">
+          <i class="fa-solid fa-headset  text-blue-500 text-4xl"></i>
+        </div>
+        <div class="div-policy-text">
+          <p>Easy Online Support</p>
+          <p>24/7 Any time support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <footer>
     <div class="mt-32">i am div</div>
   </footer>
+
+
 
 </body>
 
