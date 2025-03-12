@@ -154,6 +154,7 @@
   </section>
 
   <!-- ***** END PRODUCT SEC ****** -->
+   <!-- *****POLICY SEC ****** -->
 
   <section class="section-policy mt-20 ">
     <div class="container grid grid-cols-1 gap-10 pl-10 w-screen sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 lg:w-[90vw] bg-white py-20 sm:shadow-lg sm::rounded-md">
@@ -199,10 +200,61 @@
     </div>
   </section>
 
+  <div class="my-20 lg:my-36 lg:mr-24 flex flex-col items-center w-screen">
+    <h1 class="text-2xl font-bold lg:text-3xl lg:font-semibold w-[80vw]">Why Choose Thapa Store</h1>
+    <p class="lg:text-lg w-[80vw]">Choose Thapa EduHub for a holistic, enriching learning experience that empowers you to achieve your goals</p>
+  </div>
+
+  <!-- ******PRODUCT TEMPLATE SEC******* -->
+
+  <template id="productTemplate">
+    <div class="cards" id="cardValue">
+      <article class="information [card]">
+        <span class="category"></span>
+        <div class="imageContainer">
+          <img class="productImage" src="" alt="" />
+        </div>
+        <h2 class="productName"></h2>
+
+        <div class="productRating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p class="productDescription"></p>
+
+        <div class="productPriceElement">
+          <p class="productPrice"></p>
+          <p class="productActualPrice"></p>
+        </div>
+
+        <div class="productStockElement">
+          <p class="productProperty">Total Stocks Available:</p>
+          <p class="productStock"></p>
+        </div>
+
+        <div class="productQuantityElement">
+          <p class="productProperty">Quantity(Pieces)</p>
+          <div class="stockElement">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+        </div>
+
+        <button class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+        </button>
+      </article>
+    </div>
+  </template>
+
 
 
   <footer>
-    <div class="mt-32">i am div</div>
+    <div class="mt-32 grid-col">i am div  </div>
   </footer>
 
 
