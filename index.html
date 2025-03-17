@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <title>eCom-Web</title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+
 </head>
 
 <body class="flex flex-col items-center bg-[#F7F7F7] font-sans">
@@ -212,11 +213,13 @@
 
 
   <section class="section-products container ">
-     <h2 class="section-common--heading text-3xl ml-10 lg:ml-24 mb-10">Checkout Thapa Store</h2>
+    <h2 class="section-common--heading text-3xl ml-10 lg:ml-24 mb-10">Checkout Thapa Store</h2>
 
     <section class="container flex justify-center">
 
-      <div id="productContainer" class="grid grid-cols-1 md:grid md:grid-cols-2 md:min-w-fit xl:grid xl:grid-cols-3 gap-15 min-w-96  xl:max-w-7xl  "></div>
+      <div id="productContainer"
+        class="grid grid-cols-1 md:grid md:grid-cols-2 md:min-w-fit xl:grid xl:grid-cols-3 gap-15 min-w-96  xl:max-w-7xl  ">
+      </div>
 
     </section>
   </section>
@@ -226,7 +229,8 @@
 
   <template id="productTemplate" class="border-2 border-black">
     <div class="cards" id="cardValue">
-      <article class="information [card] shadow-xl p-6 space-y-5 min-h-fit xl:max-h-[100vh] rounded-md md:mx-6">
+      <article
+        class="information [card] shadow-xl p-6 space-y-5 min-h-fit xl:max-h-[100vh] rounded-md md:mx-6 transition-transform hover:scale-95">
         <span class="category bg-[#E7D6D6] text-sm font-extralight px-3 py-1 rounded-2xl"></span>
         <div class="imageContainer">
           <img class="productImage xl:h-[17vw] h-" src="" alt="" />
@@ -254,14 +258,16 @@
 
         <div class="productQuantityElement flex gap-7">
           <p class="productProperty text-lg">Quantity(Pieces)</p>
-          <div class="stockElement grid grid-cols-3 divide-x-1 divide-[#0000002a] border border-[#0000002a] gap-3 justify-center rounded-md items-center">
-            <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1">+</button>
+          <div
+            class="stockElement grid grid-cols-3 divide-x-1 divide-[#0000002a] border border-[#0000002a] gap-3 justify-center rounded-md items-center">
+            <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
             <p class="productQuantity py-1 px-3 text-xl font-bold pl-1">1</p>
-            <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1">-</button>
+            <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-0">-</button>
           </div>
         </div>
 
-        <button class="add-to-cart-button bg-black text-white px-6 py-2 cursor-pointer rounded-md hover:bg-white hover:text-black hover:border border-black">
+        <button
+          class="add-to-cart-button bg-black text-white px-6 py-2 cursor-pointer rounded-md hover:bg-white hover:text-black hover:border">
           <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </button>
       </article>

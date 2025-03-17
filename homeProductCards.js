@@ -12,6 +12,8 @@ export const showProductContainer = (products) => {
 
         const productClone = document.importNode(productTemplate.content, true);
 
+        productClone.querySelector('#cardValue').setAttribute('id', `card${id}`)
+
 
         productClone.querySelector('.category').textContent = category;
         productClone.querySelector('.productImage').src = image;
@@ -21,6 +23,17 @@ export const showProductContainer = (products) => {
         productClone.querySelector('.productPrice').textContent = `₹${price}`;
         productClone.querySelector('.productActualPrice').textContent = `₹${price * 4}`;
         productClone.querySelector('.productStock').textContent = stock;
+
+        // toggle increament or decrement 
+
+        productClone.querySelector('.stockElement').addEventListener('click', (event) => {
+            const homeQuantityToggle = (event, id, stock) => {
+                const currentCardElement = document.querySelector(`#card${id}`)
+                // console.log(currentCardElement);
+
+            }
+            homeQuantityToggle(event, id, stock)
+        })
 
 
         productContainer.append(productClone)
