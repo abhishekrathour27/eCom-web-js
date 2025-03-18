@@ -20,9 +20,10 @@ export const showProductContainer = (products) => {
         productClone.querySelector('.productImage').alt = name;
         productClone.querySelector('.productName').textContent = name;
         productClone.querySelector('.productDescription').textContent = description;
-        productClone.querySelector('.productPrice').textContent = `₹${price}`;
-        productClone.querySelector('.productActualPrice').textContent = `₹${price * 4}`;
+        productClone.querySelector('.productPrice').textContent = `$${price}`;
+        productClone.querySelector('.productActualPrice').textContent = `$${price * 4}`;
         productClone.querySelector('.productStock').textContent = stock;
+        
 
         // toggle increament or decrement 
 
@@ -30,6 +31,39 @@ export const showProductContainer = (products) => {
             const homeQuantityToggle = (event, id, stock) => {
                 const currentCardElement = document.querySelector(`#card${id}`)
                 // console.log(currentCardElement);
+
+                const productQuantity = currentCardElement.querySelector('.productQuantity');
+                let quantity = parseInt(productQuantity.innerHTML)
+                // console.log(quantity);
+
+
+
+                if(event.target.classList.contains('cartIncrement')){
+                    // console.log('this is incre');
+                    if(quantity < stock){
+                        quantity++
+                    
+                    }
+                    else if(quantity == stock){
+                        quantity = stock
+                    }
+                }
+
+
+                if(event.target.classList.contains('cartDecrement')){
+                    // console.log('this is incre');
+                    if(quantity > 1){
+                        quantity--
+                    
+                    }
+                    else if(quantity == stock){
+                        quantity = stock
+                    }
+                }
+
+                productQuantity.innerHTML = quantity
+
+
 
             }
             homeQuantityToggle(event, id, stock)
