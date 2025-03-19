@@ -58,8 +58,8 @@
               class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li class="nav-item ">
-            <a href="addToCart.html" class="nav-link flex gap-1">
-              <img src="./public/shopping-cart.svg" alt=""> 0
+            <a href="addToCart.html" id="cartValue" class="nav-link flex gap-1">
+              <img src="./public/shopping-cart.svg" class="cartNo" alt=""> 0
             </a>
           </li>
         </ul>
@@ -260,9 +260,9 @@
           <p class="productProperty text-lg">Quantity(Pieces)</p>
           <div
             class="stockElement grid grid-cols-3 divide-x-1 divide-[#0000002a] border border-[#0000002a] gap-3 justify-center rounded-md items-center">
-            <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
-            <p class="productQuantity py-1 px-2 text-xl font-bold pr-7 ">1</p>
             <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-0">-</button>
+            <p class="productQuantity py-1 px-2 text-xl font-bold pr-7 ">1</p>
+            <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
           </div>
         </div>
 
