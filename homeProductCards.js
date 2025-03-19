@@ -1,3 +1,5 @@
+import { addToCart } from "./addToCart.js";
+
 const productContainer = document.querySelector('#productContainer')
 const productTemplate = document.querySelector('#productTemplate')
 
@@ -23,7 +25,7 @@ export const showProductContainer = (products) => {
         productClone.querySelector('.productPrice').textContent = `$${price}`;
         productClone.querySelector('.productActualPrice').textContent = `$${price * 4}`;
         productClone.querySelector('.productStock').textContent = stock;
-        
+
 
         // toggle increament or decrement 
 
@@ -38,35 +40,40 @@ export const showProductContainer = (products) => {
 
 
 
-                if(event.target.classList.contains('cartIncrement')){
+                if (event.target.classList.contains('cartIncrement')) {
                     // console.log('this is incre');
-                    if(quantity < stock){
+                    if (quantity < stock) {
                         quantity++
-                    
+
                     }
-                    else if(quantity == stock){
+                    else if (quantity == stock) {
                         quantity = stock
                     }
                 }
 
 
-                if(event.target.classList.contains('cartDecrement')){
+                if (event.target.classList.contains('cartDecrement')) {
                     // console.log('this is incre');
-                    if(quantity > 1){
+                    if (quantity > 1) {
                         quantity--
-                    
+
                     }
-                    else if(quantity == stock){
+                    else if (quantity == stock) {
                         quantity = stock
                     }
                 }
 
                 productQuantity.innerHTML = quantity
 
-
-
             }
             homeQuantityToggle(event, id, stock)
+        })
+
+        //******* addToCart function ******
+
+        productClone.querySelector('.add-to-cart-button').addEventListener('click', () => {
+            addToCart(event, id, stock)
+
         })
 
 
