@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCom-web-cartSec</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+  
+</head>
+
+<body class="flex flex-col items-center bg-[#F7F7F7] font-sans relative">
+  <!-- ========== Start Navbar ========== -->
+  <header
+    class="section-navbar flex flex-col max-h-full md:max-h-max w-[100vw] md:shadow-md md:items-center md:w-[90vw]">
+    <section class="top_txt ">
+      <div
+        class="head_container min-h-20  flex flex-col items-center justify-center gap-3 px-7 bg-[#2A2C30] text-white md:flex-row md:justify-between md:w-[90vw]">
+        <div class="head_txt">
+          <p>Free shiping, 30-days return or refund guarantee.</p>
+        </div>
+        <div class="sign_in flex space-x-4 text-lg">
+          <p class="cursor-pointer text-blue-500">SIGN IN</p>
+          <p class="cursor-pointer text-blue-500">SIGN UP</p>
+        </div>
+      </div>
+    </section>
+    <div
+      class="container w-[100vw] flex flex-col gap-8 h-max p-3 md:flex md:flex-row md:items-center md:justify-between md:w-[90vw] ">
+      <div class="nav_brand">
+        <a href="index.html">
+          <img src="./public/logos.png" alt="eCom logo" class="logo w-[25vw] md:w-52">
+        </a>
+      </div>
+      <nav class="navbar flex items-center justify-center">
+        <ul class="space-x-5  md:text-base flex">
+          <li class="relative inline-block cursor-pointer group hover:text-blue-600">
+            <a href="/" class="nav-link">HOME</a>
+            <span
+              class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </li>
+          <li class="relative inline-block cursor-pointer group hover:text-blue-600">
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <span
+              class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </li>
+          <li class="relative inline-block cursor-pointer group hover:text-blue-600">
+            <a href="products.html" class="nav-link">PRODUCTS</a>
+            <span
+              class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </li>
+          <li class="relative inline-block cursor-pointer group hover:text-blue-600">
+            <a href="contact.html" class="nav-link">CONTACT</a>
+            <span
+              class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </li>
+          <li class="nav-item ">
+            <a href="addToCart.html" id="cartValue" class="nav-link flex gap-1">
+              <img src="./public/shopping-cart.svg" class="cartNo" alt=""> 0
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ========== End Navbar ========== -->
+
+  <section class="addToCartElement">
+    <div class="container">
+      <section>
+        <div id="productCartContainer" ></div>
+      </section>
+
+      <section class="productCartTotalElem border-4 border-black m-10 py-5 px-10 text-xl w-96 lg:relative lg:left-80 md:relative md:left-60 xl:left-2/3">
+        <div class="productCartTotalElement space-y-8 ">
+          <p class="text-xl">Selected Offer Summary</p>
+          <div class="productOrderTotal space-y-4">
+            <div class="flex justify-between">
+              <p class="font-light">Sub Total:</p>
+              <p class="productSubTotal">0</p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-light">Tax:</p>
+              <p class="productTax">₹50</p>
+            </div>
+            <hr />
+            <div class="flex justify-between">
+              <p class="font-light">Final Total:</p>
+              <p class="productFinalTotal">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Template for a product -->
+  <template id="productCartTemplate">
+    <div class="cards mt-10" id="cardValue">
+      <article class="information [ card ] grid grid-cols-6 items-center border border-[#2c2b2b5f] gap-3 px-3 py-4">
+        <div>
+          <span class="category bg-[#E7D6D6] text-sm font-extralight px-3 py-1 rounded-2xl"></span>
+        </div>
+        <div class="imageContainer ">
+          <img class="productImage lg:h-[8vw] " src="" alt="" />
+        </div>
+
+        <h2 class="productName pr-5"></h2>
+
+        <p class="productPrice"></p>
+
+        <div
+        class="stockElement grid grid-cols-3 divide-x-1 divide-[#0000002a] border border-[#0000002a] gap-3 justify-center rounded-md items-center">
+        <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-0">-</button>
+        <p class="productQuantity py-1 px-2 text-xl font-bold pr-5 w-14">1</p>
+        <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
+      </div>
+
+        <!-- <button class="add-to-cart-button">Add To Cart</button> -->
+        <button class="remove-to-cart-button bg-black text-white px-6 py-2 cursor-pointer rounded-md hover:bg-white hover:text-black hover:border">
+          Remove
+        </button>
+      </article>
+    </div>
+  </template>
+
+  <!-- ========== Start footer Section ========== -->
+  <footer class="section-footer text-sm bg-[#2A2C30] text-white max-h-full py-6">
+    <div
+      class="footer-container grid grid-cols-2  lg:grid lg:grid-cols-4 gap-10 lg:gap-5 bg-[#2A2C30] text-white lg:h-[40vh] lg:w-[95vw] items-center px-5 ">
+      <div class="content_1 min-w-[30vw] space-y-6">
+        <img src="./public/footer-logo.png" class="lg:h-[2.5vw] h-[8vw]" alt="logo" />
+        <p>
+          Welcome to Thapa EcomStore, your ultimate destination for
+          cutting-edge gadgets!
+        </p>
+        <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" class="h-4" />
+      </div>
+
+      <div class="content_2 flex flex-col lg:min-w-[10vw] lg:ml-32 space-y-5">
+        <h4 class="text-xl font-semibold">SHOPPING</h4>
+        <a href="#">Computer Store</a>
+        <a href="#">Laptop Store</a>
+        <a href="#">Accessories</a>
+        <a href="#">Sales & Discount</a>
+      </div>
+
+      <div class="content_3 flex flex-col lg:min-w-[10vw] space-y-5 lg:ml-10">
+        <h4 class="text-xl font-semibold">Experience</h4>
+        <a href="./contact.html">Contact Us</a>
+        <a href="" target="_blank">Payment Method</a>
+        <a href="" target="_blank">Delivery</a>
+        <a href="" target="_blank">Return and Exchange</a>
+      </div>
+
+      <div class="content_4 flex flex-col lg:min-w-[10vw] space-y-5">
+        <h4 class="text-xl font-semibold">NEWSLETTER</h4>
+        <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+        <div class="f-mail flex items-center border border-gray-400 rounded-md p-2 mt-2">
+          <input type="email" placeholder="Your Email"
+            class="bg-transparent outline-none flex-1 text-white placeholder-gray-400" />
+          <i class="bx bx-envelope text-xl"></i>
+        </div>
+      </div>
+    </div>
+    <div class="f-design text-center mt-5">
+      <p class="text-lg font-light">Design and Code by Abhishek </p>
+    </div>
+
+  </footer>
+
+  <!-- ========== End footer Section ========== -->
+
+  <script type="module" src="showAddToCart.js"></script>
+</body>
+
+</html>
