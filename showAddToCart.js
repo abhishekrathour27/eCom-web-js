@@ -1,6 +1,7 @@
 import { fetchDataFromLS } from "./fetchDataFromLS.js";
 import { getCartProductFromLS } from "./getCartProductLS.js";
 import { increamentDecreament } from "./increseDecrease.js";
+import { totalPriceLS } from "./totalAmountOfCart.js";
 
 let products = []; // Declare products in a higher scope
 const updateCartCount = () => {
@@ -11,7 +12,7 @@ const updateCartCount = () => {
     document.querySelector('#cartValue').innerHTML = `
         <img src="./public/shopping-cart.svg" class="cartNo" alt="">${uniqueProductCount}`;
 };
-const arrowMethodToFetchApi = async () => {
+export const arrowMethodToFetchApi = async () => {
     try {
         const response = await fetch("./api/products.json");
         products = await response.json(); // Assign the fetched products to the outer variable
@@ -54,13 +55,14 @@ const arrowMethodToFetchApi = async () => {
                 }
                 updateCartCount()
             })
-             productClone.querySelector(".stockElement").addEventListener('click' , (event)=>{
-                increamentDecreament(event,id,stock,price)
-             })
+            productClone.querySelector(".stockElement").addEventListener('click', (event) => {
+                increamentDecreament(event, id, stock, price)
+            })
 
             cartElement.append(productClone)
         });
         updateCartCount();
+        totalPriceLS();
 
     } catch (error) {
         console.log(`Error: ${error.message}`);

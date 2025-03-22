@@ -1,4 +1,5 @@
 import { getCartProductFromLS } from "./getCartProductLS.js";
+import { totalPriceLS } from "./totalAmountOfCart.js";
 
 export const increamentDecreament = (event , id , stock , price)=>{
     // console.log(id);
@@ -45,6 +46,7 @@ export const increamentDecreament = (event , id , stock , price)=>{
     }
 
     localStoragePrice = price * quantity;
+    localStoragePrice = Number(localStoragePrice.toFixed(2))
 
     let updateCart = {id , quantity , price: localStoragePrice}
       
@@ -57,5 +59,6 @@ export const increamentDecreament = (event , id , stock , price)=>{
     localStorage.setItem('cartProductLS' , JSON.stringify(updateCart));
 
     productQuantity.innerHTML = quantity
-    productPrice.innerHTML = localStoragePrice
+    productPrice.innerHTML = localStoragePrice    
+    totalPriceLS();
 }

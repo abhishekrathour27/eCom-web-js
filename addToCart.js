@@ -11,6 +11,10 @@ const updateCartCount = () => {
     cartValue.innerHTML = `<img src="./public/shopping-cart.svg" class="cartNo" alt=""> ${uniqueProductCount}`;
 };
 
+ // Function to calculate total price
+
+ 
+
 // Function to add to cart
 export const addToCart = (event, id, stock) => {
     let arrLocalStorageProduct = getCartProductFromLS();
