@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eCom-web-cartSec</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>eCom-Web-Pro</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-
-  
 </head>
 
-<body class="flex flex-col items-center bg-[#F7F7F7] font-sans relative">
-  <!-- ========== Start Navbar ========== -->
+<body class="flex flex-col items-center bg-[#F7F7F7] font-sans">
+
+  <!-- ******* NAVBAR SEC ******** -->
+
   <header
     class="section-navbar flex flex-col max-h-full md:max-h-max w-[100vw] md:shadow-md md:items-center md:w-[90vw]">
     <section class="top_txt ">
@@ -67,71 +66,76 @@
       </nav>
     </div>
   </header>
-  <!-- ========== End Navbar ========== -->
 
-  <section class="addToCartElement">
-    <div class="container">
-      <section>
-        <div id="productCartContainer" ></div>
-      </section>
+  
+  
+  <section class="section-products container ">
+    <h2 class="section-common--heading text-3xl ml-10 lg:ml-24 mb-10">Checkout Thapa Store</h2>
 
-      <section class="productCartTotalElem border-4 border-black m-10 py-5 px-10 text-xl w-80 lg:relative lg:left-80 md:relative md:left-60 xl:left-2/3">
-        <div class="productCartTotalElement space-y-8 ">
-          <p class="text-xl">Selected Offer Summary</p>
-          <div class="productOrderTotal space-y-4">
-            <div class="flex justify-between">
-              <p class="font-light">Sub Total:</p>
-              <p class="productSubTotal">0</p>
-            </div>
-            <div class="flex justify-between">
-              <p class="font-light">Tax:</p>
-              <p class="productTax">$10</p>
-            </div>
-            <hr />
-            <div class="flex justify-between">
-              <p class="font-light">Final Total:</p>
-              <p class="productFinalTotal">0</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </section>
+    <section class="container flex justify-center">
 
-  <!-- Template for a product -->
-  <template id="productCartTemplate">
-    <div class="cards mt-10 flex flex-col items-center" id="cardValue">
-      <article class="information [ card ] grid grid-cols-3 gap-3 pl-2 pb-1 md:grid md:grid-cols-4 md:gap-7 md:space-x-5 min-h-[20vh] w-[95vw] lg:grid lg:grid-cols-6 items-center border border-[#2c2b2b5f] lg:gap-3 lg:px-3  lg:py-4">
-        <div>
-          <span class="category bg-[#E7D6D6] lg:text-sm lg:font-extralight px-3 py-1 rounded-2xl"></span>
-        </div>
-        <div class="imageContainer ">
-          <img class="productImage lg:h-[8vw] h-[15vw] " src="" alt="" />
-        </div>
-
-        <h2 class="productName pr-5 font-semibold text-lg"></h2>
-
-        <p class="productPrice w-fit"></p>
-
-        <div
-        class="stockElement grid grid-cols-3 divide-x-1  mr-3 divide-[#0000002a] border border-[#0000002a] lg:gap-3 justify-center rounded-md items-center">
-        <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-0">-</button>
-        <p class="productQuantity py-1 px-2 text-xl font-bold pr-5 lg:w-14">1</p>
-        <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
+      <div id="productContainer"
+        class="grid grid-cols-1 md:grid md:grid-cols-2 md:min-w-fit xl:grid xl:grid-cols-3 gap-15 min-w-96  xl:max-w-7xl  ">
       </div>
 
-        <!-- <button class="add-to-cart-button">Add To Cart</button> -->
-        <button class="remove-to-cart-button bg-black text-white w-fit px-6 py-2 cursor-pointer rounded-md hover:bg-white hover:text-black hover:border">
-          Remove
+    </section>
+  </section>
+
+
+  <!-- ******PRODUCT TEMPLATE SEC******* -->
+
+  <template id="productTemplate" class="border-2 border-black">
+    <div class="cards" id="cardValue">
+      <article
+        class="information [card] shadow-xl p-6 space-y-5 min-h-fit xl:max-h-[100vh] rounded-md md:mx-6 transition-transform hover:scale-98">
+        <span class="category bg-emerald-600/20 text-emerald-500 text-sm font-extralight px-3 py-1 rounded-2xl"></span>
+        <div class="imageContainer">
+          <img class="productImage xl:h-[17vw] h-" src="" alt="" />
+        </div>
+        <h2 class="productName"></h2>
+
+        <div class="productRating text-yellow-500">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p class="productDescription"></p>
+
+        <div class="productPriceElement flex gap-3 text-xl">
+          <p class="productPrice"></p>
+          <p class="productActualPrice line-through"></p>
+        </div>
+
+        <div class="productStockElement flex gap-5 text-lg">
+          <p class="productProperty">Total Stocks Available:</p>
+          <p class="productStock"></p>
+        </div>
+
+        <div class="productQuantityElement flex gap-7">
+          <p class="productProperty text-lg">Quantity(Pieces)</p>
+          <div
+            class="stockElement grid grid-cols-3 divide-x-1 divide-[#0000002a] border border-[#0000002a] gap-3 justify-center rounded-md items-center">
+            <button class="cartDecrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-0">-</button>
+            <p class="productQuantity py-1 px-2 text-xl font-bold pr-5 w-14">1</p>
+            <button class="cartIncrement py-1 px-3 cursor-pointer text-xl font-bold pl-1 lg:pl-2">+</button>
+          </div>
+        </div>
+
+        <button
+          class="add-to-cart-button bg-black text-white px-6 py-2 rounded-md border-2 border-black transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:border-black hover:scale-105">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </button>
       </article>
     </div>
   </template>
 
-  <!-- ========== Start footer Section ========== -->
-  <footer class="section-footer text-sm bg-[#2A2C30] text-white max-h-full py-6">
+
+
+  <footer class="section-footer text-sm bg-[#2A2C30] text-white max-h-full py-6 mt-10 rounded-md">
     <div
-      class="footer-container grid grid-cols-2  lg:grid lg:grid-cols-4 gap-10 lg:gap-5 bg-[#2A2C30] text-white lg:h-[40vh] lg:w-[95vw] items-center px-5 ">
+      class="footer-container grid grid-cols-2  lg:grid lg:grid-cols-4 gap-10 lg:gap-5 bg-[#2A2C30] text-white lg:h-[40vh] lg:w-[96vw] items-center px-5 ">
       <div class="content_1 min-w-[30vw] space-y-6">
         <img src="./public/footer-logo.png" class="lg:h-[2.5vw] h-[8vw]" alt="logo" />
         <p>
@@ -168,14 +172,17 @@
       </div>
     </div>
     <div class="f-design text-center mt-5">
-      <p class="text-lg font-light">Design and Code by Abhishek </p>
+      <p class="text-lg font-light">Design and Code by Abhishek Singh</p>
     </div>
 
   </footer>
 
-  <!-- ========== End footer Section ========== -->
 
-  <script type="module" src="showAddToCart.js"></script>
+
+
+
+
 </body>
+<script type="module" src="main.js"></script>
 
 </html>

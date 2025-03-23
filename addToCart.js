@@ -1,4 +1,5 @@
 import { getCartProductFromLS } from "./getCartProductLS.js";
+import { showToast } from "./showToast.js";
 
 // Function to update the cart count
 const updateCartCount = () => {
@@ -51,6 +52,7 @@ export const addToCart = (event, id, stock) => {
 
         // Update cart count after adding product
         updateCartCount();
+        showToast('add' , id)
     } else {
         console.error(`Element with id="card${id}" not found.`);
     }

@@ -1,6 +1,7 @@
 import { fetchDataFromLS } from "./fetchDataFromLS.js";
 import { getCartProductFromLS } from "./getCartProductLS.js";
 import { increamentDecreament } from "./increseDecrease.js";
+import { showToast } from "./showToast.js";
 import { totalPriceLS } from "./totalAmountOfCart.js";
 
 let products = []; // Declare products in a higher scope
@@ -52,6 +53,7 @@ export const arrowMethodToFetchApi = async () => {
                 const productElement = document.querySelector(`#card${id}`);
                 if (productElement) {
                     productElement.remove(); // Remove the product from the UI
+                    showToast('delete',id)
                 }
                 updateCartCount()
             })
