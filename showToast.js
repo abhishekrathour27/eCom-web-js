@@ -1,8 +1,8 @@
 export function showToast(operation, id) {
     const toast = document.createElement("div");
     toast.classList.add(
-        "fixed", "right-5", "bg-gray-900", "text-white", "px-4", "py-2", 
-        "rounded-lg", "shadow-lg", "text-sm", "font-medium", "transition", 
+        "absolute", "right-5", "bg-gray-900", "text-white", "px-4", "py-2",
+        "rounded-lg", "shadow-lg", "text-sm", "font-medium", "transition",
         "transform", "translate-y-10", "opacity-0"
     );
 
@@ -12,6 +12,14 @@ export function showToast(operation, id) {
         : `Product with ID ${id} has been removed.`;
 
     document.body.appendChild(toast);
+
+    // Calculate dynamic position based on scroll
+    const scrollY = window.scrollY; 
+    const viewportHeight = window.innerHeight; 
+    const toastOffset = 80; // Adjust this value to position it better
+
+    // Position the toast at the bottom-right
+    toast.style.top = `${scrollY + viewportHeight - toastOffset}px`;
 
     // Animate toast appearance
     setTimeout(() => {
@@ -25,6 +33,6 @@ export function showToast(operation, id) {
         toast.classList.replace("translate-y-0", "translate-y-10");
         setTimeout(() => {
             toast.remove();
-        }, 500); // Allow time for fade-out animation
+        }, 500);
     }, 2000);
 }
