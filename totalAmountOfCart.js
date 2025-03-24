@@ -7,7 +7,7 @@ export const totalPriceLS = () => {
    totalAmountOfCart = Number(totalAmountOfCart.toFixed(2))
    document.querySelector('.productSubTotal').innerText = `$${totalAmountOfCart}`
 
-   let finalTotal = totalAmountOfCart + 50;
+   let finalTotal = totalAmountOfCart + 10;
     document.querySelector('.productFinalTotal').innerText = `$${finalTotal}`
 
 }
