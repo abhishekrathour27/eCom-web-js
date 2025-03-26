@@ -1,7 +1,7 @@
 export function showToast(operation, id) {
     const toast = document.createElement("div");
     toast.classList.add(
-        "absolute", "right-5", "bg-blue-400", "text-white", "px-4", "py-2",
+        "absolute", "right-5", "bg-gray-800", "text-white", "px-4", "py-2",
         "rounded-lg", "shadow-lg", "text-sm", "font-medium", "transition",
         "transform", "translate-y-10", "opacity-0"
     );
