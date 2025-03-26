@@ -58,5 +58,35 @@
       "stock": 20,
       "image": "../public/tv.png",
       "description": "Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color."
+    },
+    {
+      "id": 7,
+      "name": "Television",
+      "category": "Video",
+      "brand": "Samsung",
+      "price": 199.99,
+      "stock": 20,
+      "image": "../public/tv.png",
+      "description": "Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color."
+    },
+    {
+      "id": 8,
+      "name": "Television",
+      "category": "Video",
+      "brand": "Samsung",
+      "price": 199.99,
+      "stock": 20,
+      "image": "../public/tv.png",
+      "description": "Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color."
+    },
+    {
+      "id": 9,
+      "name": "Television",
+      "category": "Video",
+      "brand": "Samsung",
+      "price": 199.99,
+      "stock": 20,
+      "image": "../public/tv.png",
+      "description": "Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color."
     }
   ]
